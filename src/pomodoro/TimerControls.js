@@ -8,6 +8,7 @@ function TimerControls({
   setSession,
   setIsTimerRunning,
 }) {
+  //jsx for play,pause, and stop buttons
   return (
     <>
       <div className="col">

@@ -8,6 +8,7 @@ function SessionTimer({
   focusDuration,
   breakDuration,
 }) {
+  //jsx for current session
   if (session) {
     return (
       <>

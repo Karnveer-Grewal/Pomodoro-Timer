@@ -1,13 +1,18 @@
 import React from "react";
 
+//function for progress bar
 function ProgressBar({ session, focusDuration, breakDuration }) {
+  //calculations for progress bar for focus duration
   const focusDurationSec = focusDuration * 60;
   const focusDecimal = 1 - session?.timeRemaining / focusDurationSec;
   const focusPercentage = focusDecimal * 100 || 0;
+
+  //calculations for progress bar for break duration
   const breakDurationSec = breakDuration * 60;
   const breakDecimal = 1 - session?.timeRemaining / breakDurationSec;
   const breakPercentage = breakDecimal * 100;
 
+  //return jsx for progress bar
   return (
     <>
       <div className="col">

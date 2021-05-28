@@ -57,28 +57,34 @@ function Pomodoro() {
   const [session, setSession] = useState(null);
 
   // ToDo: Allow the user to adjust the focus and break duration.
+  //Set state of focus session duration
   const [focusDuration, setFocusDuration] = useState(25);
 
+  //handled focus duration state for adding time
   const handleAddFocusDuration = () => {
     if (focusDuration < 60) {
       return setFocusDuration(focusDuration + 5);
     }
   };
 
+  //handled focus duration state for subtracting time
   const handleSubtractFocusDuration = () => {
     if (focusDuration > 5) {
       return setFocusDuration(focusDuration - 5);
     }
   };
 
+  //Set state of break session duration
   const [breakDuration, setBreakDuration] = useState(5);
 
+  //handled break duration state for adding time
   const handleAddBreakDuration = () => {
     if (breakDuration < 15) {
       return setBreakDuration(breakDuration + 1);
     }
   };
 
+  //handled break duration state for adding time
   const handleSubtractBreakDuration = () => {
     if (breakDuration > 1) {
       return setBreakDuration(breakDuration - 1);
@@ -124,6 +130,7 @@ function Pomodoro() {
     });
   }
 
+  //jsx for full pomodoro timer
   return (
     <div className="pomodoro">
       <div className="row">

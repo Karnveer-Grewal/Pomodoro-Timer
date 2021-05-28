@@ -1,6 +1,7 @@
 import React from "react";
 import { minutesToDuration } from "../utils/duration";
 
+//component for focus duration and break duration buttons
 function Duration({
   focusDuration,
   handleAddFocusDuration,
@@ -10,6 +11,7 @@ function Duration({
   handleSubtractBreakDuration,
   session,
 }) {
+  //jsx for focus and break buttons
   return (
     <>
       <div className="col">
